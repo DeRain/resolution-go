@@ -2,6 +2,7 @@ package resolution
 
 import (
 	"encoding/json"
+	"github.com/unstoppabledomains/resolution-go/namingservice"
 	"strings"
 
 	"github.com/Zilliqa/gozilliqa-sdk/provider"
@@ -54,7 +55,7 @@ const znsMainnetRegistry = "9611c53BE6d1b32058b2747bdeCECed7e1216793"
 const znsContractField = "records"
 const znsZeroAddress = "0x0000000000000000000000000000000000000000"
 
-// NewCnsBuilder Creates ZNS builder instance.
+// NewZnsBuilder Creates ZNS builder instance.
 func NewZnsBuilder() ZnsBuilder {
 	return &znsBuilder{}
 }
@@ -236,4 +237,16 @@ func (z *Zns) DNS(domainName string, types []dnsrecords.Type) ([]dnsrecords.Reco
 
 func (z *Zns) IsSupportedDomain(domainName string) bool {
 	return strings.HasSuffix(domainName, ".zil")
+}
+
+func (z *Zns) TokenURI(_ string) (string, error) {
+	return "", &MethodIsNotSupportedError{NamingServiceName: namingservice.ZNS}
+}
+
+func (z *Zns) TokenURIMetadata(_ string) (TokenMetadata, error) {
+	return TokenMetadata{}, &MethodIsNotSupportedError{NamingServiceName: namingservice.ZNS}
+}
+
+func (z *Zns) Unhash(_ string) (string, error) {
+	return "", &MethodIsNotSupportedError{NamingServiceName: namingservice.ZNS}
 }

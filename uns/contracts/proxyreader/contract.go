@@ -27,7 +27,7 @@ var (
 )
 
 // ContractABI is the input ABI used to generate the binding from.
-const ContractABI = "[{\"inputs\":[{\"internalType\":\"contractRegistry\",\"name\":\"registry\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"NAME\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"VERSION\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"tokenURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"isApprovedOrOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"resolverOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"label\",\"type\":\"string\"}],\"name\":\"childIdOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isController\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"root\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"nonceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"registry\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"get\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"string[]\",\"name\":\"keys\",\"type\":\"string[]\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getMany\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"\",\"type\":\"string[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"keyHash\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getByHash\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"value\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"keyHashes\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getManyByHash\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"keys\",\"type\":\"string[]\"},{\"internalType\":\"string[]\",\"name\":\"values\",\"type\":\"string[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"string[]\",\"name\":\"keys\",\"type\":\"string[]\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getData\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"resolver\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string[]\",\"name\":\"values\",\"type\":\"string[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"keyHashes\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getDataByHash\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"resolver\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string[]\",\"name\":\"keys\",\"type\":\"string[]\"},{\"internalType\":\"string[]\",\"name\":\"values\",\"type\":\"string[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}]"
+const ContractABI = "[{\"inputs\":[{\"internalType\":\"contractIRegistry\",\"name\":\"unsRegistry\",\"type\":\"address\"},{\"internalType\":\"contractICryptoRegistry\",\"name\":\"cnsRegistry\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"NAME\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"VERSION\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"label\",\"type\":\"string\"}],\"name\":\"childIdOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"exists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"get\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"value\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"keyHash\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getByHash\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"value\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string[]\",\"name\":\"keys\",\"type\":\"string[]\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getData\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"resolver\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string[]\",\"name\":\"values\",\"type\":\"string[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"keyHashes\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getDataByHash\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"resolver\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string[]\",\"name\":\"keys\",\"type\":\"string[]\"},{\"internalType\":\"string[]\",\"name\":\"values\",\"type\":\"string[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"keyHashes\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"tokenIds\",\"type\":\"uint256[]\"}],\"name\":\"getDataByHashForMany\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"resolvers\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"owners\",\"type\":\"address[]\"},{\"internalType\":\"string[][]\",\"name\":\"keys\",\"type\":\"string[][]\"},{\"internalType\":\"string[][]\",\"name\":\"values\",\"type\":\"string[][]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string[]\",\"name\":\"keys\",\"type\":\"string[]\"},{\"internalType\":\"uint256[]\",\"name\":\"tokenIds\",\"type\":\"uint256[]\"}],\"name\":\"getDataForMany\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"resolvers\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"owners\",\"type\":\"address[]\"},{\"internalType\":\"string[][]\",\"name\":\"values\",\"type\":\"string[][]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string[]\",\"name\":\"keys\",\"type\":\"string[]\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getMany\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"values\",\"type\":\"string[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"keyHashes\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getManyByHash\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"keys\",\"type\":\"string[]\"},{\"internalType\":\"string[]\",\"name\":\"values\",\"type\":\"string[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"isApprovedOrOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"tokenIds\",\"type\":\"uint256[]\"}],\"name\":\"ownerOfForMany\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"owners\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"registryOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"resolverOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"tokenURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]"
 
 // Contract is an auto generated Go binding around an Ethereum contract.
 type Contract struct {
@@ -295,9 +295,40 @@ func (_Contract *ContractCallerSession) ChildIdOf(tokenId *big.Int, label string
 	return _Contract.Contract.ChildIdOf(&_Contract.CallOpts, tokenId, label)
 }
 
+// Exists is a free data retrieval call binding the contract method 0x4f558e79.
+//
+// Solidity: function exists(uint256 tokenId) view returns(bool)
+func (_Contract *ContractCaller) Exists(opts *bind.CallOpts, tokenId *big.Int) (bool, error) {
+	var out []interface{}
+	err := _Contract.contract.Call(opts, &out, "exists", tokenId)
+
+	if err != nil {
+		return *new(bool), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(bool)).(*bool)
+
+	return out0, err
+
+}
+
+// Exists is a free data retrieval call binding the contract method 0x4f558e79.
+//
+// Solidity: function exists(uint256 tokenId) view returns(bool)
+func (_Contract *ContractSession) Exists(tokenId *big.Int) (bool, error) {
+	return _Contract.Contract.Exists(&_Contract.CallOpts, tokenId)
+}
+
+// Exists is a free data retrieval call binding the contract method 0x4f558e79.
+//
+// Solidity: function exists(uint256 tokenId) view returns(bool)
+func (_Contract *ContractCallerSession) Exists(tokenId *big.Int) (bool, error) {
+	return _Contract.Contract.Exists(&_Contract.CallOpts, tokenId)
+}
+
 // Get is a free data retrieval call binding the contract method 0x1be5e7ed.
 //
-// Solidity: function get(string key, uint256 tokenId) view returns(string)
+// Solidity: function get(string key, uint256 tokenId) view returns(string value)
 func (_Contract *ContractCaller) Get(opts *bind.CallOpts, key string, tokenId *big.Int) (string, error) {
 	var out []interface{}
 	err := _Contract.contract.Call(opts, &out, "get", key, tokenId)
@@ -314,14 +345,14 @@ func (_Contract *ContractCaller) Get(opts *bind.CallOpts, key string, tokenId *b
 
 // Get is a free data retrieval call binding the contract method 0x1be5e7ed.
 //
-// Solidity: function get(string key, uint256 tokenId) view returns(string)
+// Solidity: function get(string key, uint256 tokenId) view returns(string value)
 func (_Contract *ContractSession) Get(key string, tokenId *big.Int) (string, error) {
 	return _Contract.Contract.Get(&_Contract.CallOpts, key, tokenId)
 }
 
 // Get is a free data retrieval call binding the contract method 0x1be5e7ed.
 //
-// Solidity: function get(string key, uint256 tokenId) view returns(string)
+// Solidity: function get(string key, uint256 tokenId) view returns(string value)
 func (_Contract *ContractCallerSession) Get(key string, tokenId *big.Int) (string, error) {
 	return _Contract.Contract.Get(&_Contract.CallOpts, key, tokenId)
 }
@@ -371,9 +402,12 @@ func (_Contract *ContractCaller) GetByHash(opts *bind.CallOpts, keyHash *big.Int
 		Key   string
 		Value string
 	})
+	if err != nil {
+		return *outstruct, err
+	}
 
-	outstruct.Key = out[0].(string)
-	outstruct.Value = out[1].(string)
+	outstruct.Key = *abi.ConvertType(out[0], new(string)).(*string)
+	outstruct.Value = *abi.ConvertType(out[1], new(string)).(*string)
 
 	return *outstruct, err
 
@@ -415,10 +449,13 @@ func (_Contract *ContractCaller) GetData(opts *bind.CallOpts, keys []string, tok
 		Owner    common.Address
 		Values   []string
 	})
+	if err != nil {
+		return *outstruct, err
+	}
 
-	outstruct.Resolver = out[0].(common.Address)
-	outstruct.Owner = out[1].(common.Address)
-	outstruct.Values = out[2].([]string)
+	outstruct.Resolver = *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+	outstruct.Owner = *abi.ConvertType(out[1], new(common.Address)).(*common.Address)
+	outstruct.Values = *abi.ConvertType(out[2], new([]string)).(*[]string)
 
 	return *outstruct, err
 
@@ -464,11 +501,14 @@ func (_Contract *ContractCaller) GetDataByHash(opts *bind.CallOpts, keyHashes []
 		Keys     []string
 		Values   []string
 	})
+	if err != nil {
+		return *outstruct, err
+	}
 
-	outstruct.Resolver = out[0].(common.Address)
-	outstruct.Owner = out[1].(common.Address)
-	outstruct.Keys = out[2].([]string)
-	outstruct.Values = out[3].([]string)
+	outstruct.Resolver = *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+	outstruct.Owner = *abi.ConvertType(out[1], new(common.Address)).(*common.Address)
+	outstruct.Keys = *abi.ConvertType(out[2], new([]string)).(*[]string)
+	outstruct.Values = *abi.ConvertType(out[3], new([]string)).(*[]string)
 
 	return *outstruct, err
 
@@ -498,9 +538,114 @@ func (_Contract *ContractCallerSession) GetDataByHash(keyHashes []*big.Int, toke
 	return _Contract.Contract.GetDataByHash(&_Contract.CallOpts, keyHashes, tokenId)
 }
 
+// GetDataByHashForMany is a free data retrieval call binding the contract method 0x869b8884.
+//
+// Solidity: function getDataByHashForMany(uint256[] keyHashes, uint256[] tokenIds) view returns(address[] resolvers, address[] owners, string[][] keys, string[][] values)
+func (_Contract *ContractCaller) GetDataByHashForMany(opts *bind.CallOpts, keyHashes []*big.Int, tokenIds []*big.Int) (struct {
+	Resolvers []common.Address
+	Owners    []common.Address
+	Keys      [][]string
+	Values    [][]string
+}, error) {
+	var out []interface{}
+	err := _Contract.contract.Call(opts, &out, "getDataByHashForMany", keyHashes, tokenIds)
+
+	outstruct := new(struct {
+		Resolvers []common.Address
+		Owners    []common.Address
+		Keys      [][]string
+		Values    [][]string
+	})
+	if err != nil {
+		return *outstruct, err
+	}
+
+	outstruct.Resolvers = *abi.ConvertType(out[0], new([]common.Address)).(*[]common.Address)
+	outstruct.Owners = *abi.ConvertType(out[1], new([]common.Address)).(*[]common.Address)
+	outstruct.Keys = *abi.ConvertType(out[2], new([][]string)).(*[][]string)
+	outstruct.Values = *abi.ConvertType(out[3], new([][]string)).(*[][]string)
+
+	return *outstruct, err
+
+}
+
+// GetDataByHashForMany is a free data retrieval call binding the contract method 0x869b8884.
+//
+// Solidity: function getDataByHashForMany(uint256[] keyHashes, uint256[] tokenIds) view returns(address[] resolvers, address[] owners, string[][] keys, string[][] values)
+func (_Contract *ContractSession) GetDataByHashForMany(keyHashes []*big.Int, tokenIds []*big.Int) (struct {
+	Resolvers []common.Address
+	Owners    []common.Address
+	Keys      [][]string
+	Values    [][]string
+}, error) {
+	return _Contract.Contract.GetDataByHashForMany(&_Contract.CallOpts, keyHashes, tokenIds)
+}
+
+// GetDataByHashForMany is a free data retrieval call binding the contract method 0x869b8884.
+//
+// Solidity: function getDataByHashForMany(uint256[] keyHashes, uint256[] tokenIds) view returns(address[] resolvers, address[] owners, string[][] keys, string[][] values)
+func (_Contract *ContractCallerSession) GetDataByHashForMany(keyHashes []*big.Int, tokenIds []*big.Int) (struct {
+	Resolvers []common.Address
+	Owners    []common.Address
+	Keys      [][]string
+	Values    [][]string
+}, error) {
+	return _Contract.Contract.GetDataByHashForMany(&_Contract.CallOpts, keyHashes, tokenIds)
+}
+
+// GetDataForMany is a free data retrieval call binding the contract method 0x933c051d.
+//
+// Solidity: function getDataForMany(string[] keys, uint256[] tokenIds) view returns(address[] resolvers, address[] owners, string[][] values)
+func (_Contract *ContractCaller) GetDataForMany(opts *bind.CallOpts, keys []string, tokenIds []*big.Int) (struct {
+	Resolvers []common.Address
+	Owners    []common.Address
+	Values    [][]string
+}, error) {
+	var out []interface{}
+	err := _Contract.contract.Call(opts, &out, "getDataForMany", keys, tokenIds)
+
+	outstruct := new(struct {
+		Resolvers []common.Address
+		Owners    []common.Address
+		Values    [][]string
+	})
+	if err != nil {
+		return *outstruct, err
+	}
+
+	outstruct.Resolvers = *abi.ConvertType(out[0], new([]common.Address)).(*[]common.Address)
+	outstruct.Owners = *abi.ConvertType(out[1], new([]common.Address)).(*[]common.Address)
+	outstruct.Values = *abi.ConvertType(out[2], new([][]string)).(*[][]string)
+
+	return *outstruct, err
+
+}
+
+// GetDataForMany is a free data retrieval call binding the contract method 0x933c051d.
+//
+// Solidity: function getDataForMany(string[] keys, uint256[] tokenIds) view returns(address[] resolvers, address[] owners, string[][] values)
+func (_Contract *ContractSession) GetDataForMany(keys []string, tokenIds []*big.Int) (struct {
+	Resolvers []common.Address
+	Owners    []common.Address
+	Values    [][]string
+}, error) {
+	return _Contract.Contract.GetDataForMany(&_Contract.CallOpts, keys, tokenIds)
+}
+
+// GetDataForMany is a free data retrieval call binding the contract method 0x933c051d.
+//
+// Solidity: function getDataForMany(string[] keys, uint256[] tokenIds) view returns(address[] resolvers, address[] owners, string[][] values)
+func (_Contract *ContractCallerSession) GetDataForMany(keys []string, tokenIds []*big.Int) (struct {
+	Resolvers []common.Address
+	Owners    []common.Address
+	Values    [][]string
+}, error) {
+	return _Contract.Contract.GetDataForMany(&_Contract.CallOpts, keys, tokenIds)
+}
+
 // GetMany is a free data retrieval call binding the contract method 0x1bd8cc1a.
 //
-// Solidity: function getMany(string[] keys, uint256 tokenId) view returns(string[])
+// Solidity: function getMany(string[] keys, uint256 tokenId) view returns(string[] values)
 func (_Contract *ContractCaller) GetMany(opts *bind.CallOpts, keys []string, tokenId *big.Int) ([]string, error) {
 	var out []interface{}
 	err := _Contract.contract.Call(opts, &out, "getMany", keys, tokenId)
@@ -517,14 +662,14 @@ func (_Contract *ContractCaller) GetMany(opts *bind.CallOpts, keys []string, tok
 
 // GetMany is a free data retrieval call binding the contract method 0x1bd8cc1a.
 //
-// Solidity: function getMany(string[] keys, uint256 tokenId) view returns(string[])
+// Solidity: function getMany(string[] keys, uint256 tokenId) view returns(string[] values)
 func (_Contract *ContractSession) GetMany(keys []string, tokenId *big.Int) ([]string, error) {
 	return _Contract.Contract.GetMany(&_Contract.CallOpts, keys, tokenId)
 }
 
 // GetMany is a free data retrieval call binding the contract method 0x1bd8cc1a.
 //
-// Solidity: function getMany(string[] keys, uint256 tokenId) view returns(string[])
+// Solidity: function getMany(string[] keys, uint256 tokenId) view returns(string[] values)
 func (_Contract *ContractCallerSession) GetMany(keys []string, tokenId *big.Int) ([]string, error) {
 	return _Contract.Contract.GetMany(&_Contract.CallOpts, keys, tokenId)
 }
@@ -543,9 +688,12 @@ func (_Contract *ContractCaller) GetManyByHash(opts *bind.CallOpts, keyHashes []
 		Keys   []string
 		Values []string
 	})
+	if err != nil {
+		return *outstruct, err
+	}
 
-	outstruct.Keys = out[0].([]string)
-	outstruct.Values = out[1].([]string)
+	outstruct.Keys = *abi.ConvertType(out[0], new([]string)).(*[]string)
+	outstruct.Values = *abi.ConvertType(out[1], new([]string)).(*[]string)
 
 	return *outstruct, err
 
@@ -573,10 +721,10 @@ func (_Contract *ContractCallerSession) GetManyByHash(keyHashes []*big.Int, toke
 
 // IsApprovedForAll is a free data retrieval call binding the contract method 0xe985e9c5.
 //
-// Solidity: function isApprovedForAll(address owner, address operator) view returns(bool)
-func (_Contract *ContractCaller) IsApprovedForAll(opts *bind.CallOpts, owner common.Address, operator common.Address) (bool, error) {
+// Solidity: function isApprovedForAll(address , address ) pure returns(bool)
+func (_Contract *ContractCaller) IsApprovedForAll(opts *bind.CallOpts, arg0 common.Address, arg1 common.Address) (bool, error) {
 	var out []interface{}
-	err := _Contract.contract.Call(opts, &out, "isApprovedForAll", owner, operator)
+	err := _Contract.contract.Call(opts, &out, "isApprovedForAll", arg0, arg1)
 
 	if err != nil {
 		return *new(bool), err
@@ -590,16 +738,16 @@ func (_Contract *ContractCaller) IsApprovedForAll(opts *bind.CallOpts, owner com
 
 // IsApprovedForAll is a free data retrieval call binding the contract method 0xe985e9c5.
 //
-// Solidity: function isApprovedForAll(address owner, address operator) view returns(bool)
-func (_Contract *ContractSession) IsApprovedForAll(owner common.Address, operator common.Address) (bool, error) {
-	return _Contract.Contract.IsApprovedForAll(&_Contract.CallOpts, owner, operator)
+// Solidity: function isApprovedForAll(address , address ) pure returns(bool)
+func (_Contract *ContractSession) IsApprovedForAll(arg0 common.Address, arg1 common.Address) (bool, error) {
+	return _Contract.Contract.IsApprovedForAll(&_Contract.CallOpts, arg0, arg1)
 }
 
 // IsApprovedForAll is a free data retrieval call binding the contract method 0xe985e9c5.
 //
-// Solidity: function isApprovedForAll(address owner, address operator) view returns(bool)
-func (_Contract *ContractCallerSession) IsApprovedForAll(owner common.Address, operator common.Address) (bool, error) {
-	return _Contract.Contract.IsApprovedForAll(&_Contract.CallOpts, owner, operator)
+// Solidity: function isApprovedForAll(address , address ) pure returns(bool)
+func (_Contract *ContractCallerSession) IsApprovedForAll(arg0 common.Address, arg1 common.Address) (bool, error) {
+	return _Contract.Contract.IsApprovedForAll(&_Contract.CallOpts, arg0, arg1)
 }
 
 // IsApprovedOrOwner is a free data retrieval call binding the contract method 0x430c2081.
@@ -633,99 +781,6 @@ func (_Contract *ContractCallerSession) IsApprovedOrOwner(spender common.Address
 	return _Contract.Contract.IsApprovedOrOwner(&_Contract.CallOpts, spender, tokenId)
 }
 
-// IsController is a free data retrieval call binding the contract method 0xb429afeb.
-//
-// Solidity: function isController(address account) view returns(bool)
-func (_Contract *ContractCaller) IsController(opts *bind.CallOpts, account common.Address) (bool, error) {
-	var out []interface{}
-	err := _Contract.contract.Call(opts, &out, "isController", account)
-
-	if err != nil {
-		return *new(bool), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(bool)).(*bool)
-
-	return out0, err
-
-}
-
-// IsController is a free data retrieval call binding the contract method 0xb429afeb.
-//
-// Solidity: function isController(address account) view returns(bool)
-func (_Contract *ContractSession) IsController(account common.Address) (bool, error) {
-	return _Contract.Contract.IsController(&_Contract.CallOpts, account)
-}
-
-// IsController is a free data retrieval call binding the contract method 0xb429afeb.
-//
-// Solidity: function isController(address account) view returns(bool)
-func (_Contract *ContractCallerSession) IsController(account common.Address) (bool, error) {
-	return _Contract.Contract.IsController(&_Contract.CallOpts, account)
-}
-
-// Name is a free data retrieval call binding the contract method 0x06fdde03.
-//
-// Solidity: function name() view returns(string)
-func (_Contract *ContractCaller) Name(opts *bind.CallOpts) (string, error) {
-	var out []interface{}
-	err := _Contract.contract.Call(opts, &out, "name")
-
-	if err != nil {
-		return *new(string), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(string)).(*string)
-
-	return out0, err
-
-}
-
-// Name is a free data retrieval call binding the contract method 0x06fdde03.
-//
-// Solidity: function name() view returns(string)
-func (_Contract *ContractSession) Name() (string, error) {
-	return _Contract.Contract.Name(&_Contract.CallOpts)
-}
-
-// Name is a free data retrieval call binding the contract method 0x06fdde03.
-//
-// Solidity: function name() view returns(string)
-func (_Contract *ContractCallerSession) Name() (string, error) {
-	return _Contract.Contract.Name(&_Contract.CallOpts)
-}
-
-// NonceOf is a free data retrieval call binding the contract method 0x6ccbae5f.
-//
-// Solidity: function nonceOf(uint256 tokenId) view returns(uint256)
-func (_Contract *ContractCaller) NonceOf(opts *bind.CallOpts, tokenId *big.Int) (*big.Int, error) {
-	var out []interface{}
-	err := _Contract.contract.Call(opts, &out, "nonceOf", tokenId)
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// NonceOf is a free data retrieval call binding the contract method 0x6ccbae5f.
-//
-// Solidity: function nonceOf(uint256 tokenId) view returns(uint256)
-func (_Contract *ContractSession) NonceOf(tokenId *big.Int) (*big.Int, error) {
-	return _Contract.Contract.NonceOf(&_Contract.CallOpts, tokenId)
-}
-
-// NonceOf is a free data retrieval call binding the contract method 0x6ccbae5f.
-//
-// Solidity: function nonceOf(uint256 tokenId) view returns(uint256)
-func (_Contract *ContractCallerSession) NonceOf(tokenId *big.Int) (*big.Int, error) {
-	return _Contract.Contract.NonceOf(&_Contract.CallOpts, tokenId)
-}
-
 // OwnerOf is a free data retrieval call binding the contract method 0x6352211e.
 //
 // Solidity: function ownerOf(uint256 tokenId) view returns(address)
@@ -757,12 +812,43 @@ func (_Contract *ContractCallerSession) OwnerOf(tokenId *big.Int) (common.Addres
 	return _Contract.Contract.OwnerOf(&_Contract.CallOpts, tokenId)
 }
 
-// Registry is a free data retrieval call binding the contract method 0x7b103999.
+// OwnerOfForMany is a free data retrieval call binding the contract method 0xc15ae7cf.
 //
-// Solidity: function registry() view returns(address)
-func (_Contract *ContractCaller) Registry(opts *bind.CallOpts) (common.Address, error) {
+// Solidity: function ownerOfForMany(uint256[] tokenIds) view returns(address[] owners)
+func (_Contract *ContractCaller) OwnerOfForMany(opts *bind.CallOpts, tokenIds []*big.Int) ([]common.Address, error) {
 	var out []interface{}
-	err := _Contract.contract.Call(opts, &out, "registry")
+	err := _Contract.contract.Call(opts, &out, "ownerOfForMany", tokenIds)
+
+	if err != nil {
+		return *new([]common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([]common.Address)).(*[]common.Address)
+
+	return out0, err
+
+}
+
+// OwnerOfForMany is a free data retrieval call binding the contract method 0xc15ae7cf.
+//
+// Solidity: function ownerOfForMany(uint256[] tokenIds) view returns(address[] owners)
+func (_Contract *ContractSession) OwnerOfForMany(tokenIds []*big.Int) ([]common.Address, error) {
+	return _Contract.Contract.OwnerOfForMany(&_Contract.CallOpts, tokenIds)
+}
+
+// OwnerOfForMany is a free data retrieval call binding the contract method 0xc15ae7cf.
+//
+// Solidity: function ownerOfForMany(uint256[] tokenIds) view returns(address[] owners)
+func (_Contract *ContractCallerSession) OwnerOfForMany(tokenIds []*big.Int) ([]common.Address, error) {
+	return _Contract.Contract.OwnerOfForMany(&_Contract.CallOpts, tokenIds)
+}
+
+// RegistryOf is a free data retrieval call binding the contract method 0xa81ce6f9.
+//
+// Solidity: function registryOf(uint256 tokenId) view returns(address)
+func (_Contract *ContractCaller) RegistryOf(opts *bind.CallOpts, tokenId *big.Int) (common.Address, error) {
+	var out []interface{}
+	err := _Contract.contract.Call(opts, &out, "registryOf", tokenId)
 
 	if err != nil {
 		return *new(common.Address), err
@@ -774,18 +860,18 @@ func (_Contract *ContractCaller) Registry(opts *bind.CallOpts) (common.Address, 
 
 }
 
-// Registry is a free data retrieval call binding the contract method 0x7b103999.
+// RegistryOf is a free data retrieval call binding the contract method 0xa81ce6f9.
 //
-// Solidity: function registry() view returns(address)
-func (_Contract *ContractSession) Registry() (common.Address, error) {
-	return _Contract.Contract.Registry(&_Contract.CallOpts)
+// Solidity: function registryOf(uint256 tokenId) view returns(address)
+func (_Contract *ContractSession) RegistryOf(tokenId *big.Int) (common.Address, error) {
+	return _Contract.Contract.RegistryOf(&_Contract.CallOpts, tokenId)
 }
 
-// Registry is a free data retrieval call binding the contract method 0x7b103999.
+// RegistryOf is a free data retrieval call binding the contract method 0xa81ce6f9.
 //
-// Solidity: function registry() view returns(address)
-func (_Contract *ContractCallerSession) Registry() (common.Address, error) {
-	return _Contract.Contract.Registry(&_Contract.CallOpts)
+// Solidity: function registryOf(uint256 tokenId) view returns(address)
+func (_Contract *ContractCallerSession) RegistryOf(tokenId *big.Int) (common.Address, error) {
+	return _Contract.Contract.RegistryOf(&_Contract.CallOpts, tokenId)
 }
 
 // ResolverOf is a free data retrieval call binding the contract method 0xb3f9e4cb.
@@ -819,37 +905,6 @@ func (_Contract *ContractCallerSession) ResolverOf(tokenId *big.Int) (common.Add
 	return _Contract.Contract.ResolverOf(&_Contract.CallOpts, tokenId)
 }
 
-// Root is a free data retrieval call binding the contract method 0xebf0c717.
-//
-// Solidity: function root() view returns(uint256)
-func (_Contract *ContractCaller) Root(opts *bind.CallOpts) (*big.Int, error) {
-	var out []interface{}
-	err := _Contract.contract.Call(opts, &out, "root")
-
-	if err != nil {
-		return *new(*big.Int), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
-
-	return out0, err
-
-}
-
-// Root is a free data retrieval call binding the contract method 0xebf0c717.
-//
-// Solidity: function root() view returns(uint256)
-func (_Contract *ContractSession) Root() (*big.Int, error) {
-	return _Contract.Contract.Root(&_Contract.CallOpts)
-}
-
-// Root is a free data retrieval call binding the contract method 0xebf0c717.
-//
-// Solidity: function root() view returns(uint256)
-func (_Contract *ContractCallerSession) Root() (*big.Int, error) {
-	return _Contract.Contract.Root(&_Contract.CallOpts)
-}
-
 // SupportsInterface is a free data retrieval call binding the contract method 0x01ffc9a7.
 //
 // Solidity: function supportsInterface(bytes4 interfaceId) view returns(bool)
@@ -879,37 +934,6 @@ func (_Contract *ContractSession) SupportsInterface(interfaceId [4]byte) (bool, 
 // Solidity: function supportsInterface(bytes4 interfaceId) view returns(bool)
 func (_Contract *ContractCallerSession) SupportsInterface(interfaceId [4]byte) (bool, error) {
 	return _Contract.Contract.SupportsInterface(&_Contract.CallOpts, interfaceId)
-}
-
-// Symbol is a free data retrieval call binding the contract method 0x95d89b41.
-//
-// Solidity: function symbol() view returns(string)
-func (_Contract *ContractCaller) Symbol(opts *bind.CallOpts) (string, error) {
-	var out []interface{}
-	err := _Contract.contract.Call(opts, &out, "symbol")
-
-	if err != nil {
-		return *new(string), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(string)).(*string)
-
-	return out0, err
-
-}
-
-// Symbol is a free data retrieval call binding the contract method 0x95d89b41.
-//
-// Solidity: function symbol() view returns(string)
-func (_Contract *ContractSession) Symbol() (string, error) {
-	return _Contract.Contract.Symbol(&_Contract.CallOpts)
-}
-
-// Symbol is a free data retrieval call binding the contract method 0x95d89b41.
-//
-// Solidity: function symbol() view returns(string)
-func (_Contract *ContractCallerSession) Symbol() (string, error) {
-	return _Contract.Contract.Symbol(&_Contract.CallOpts)
 }
 
 // TokenURI is a free data retrieval call binding the contract method 0xc87b56dd.

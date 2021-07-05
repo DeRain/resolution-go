@@ -214,3 +214,24 @@ func TestZnsUnsupportedDomainError(t *testing.T) {
 	_, err := zns.State("invalid.crypto")
 	assert.ErrorAs(t, err, &expectedError)
 }
+
+func TestZnsTokenUriIsNotSupported(t *testing.T) {
+	t.Parallel()
+	var expectedError *MethodIsNotSupportedError
+	_, err := zns.TokenURI("brad.zil")
+	assert.ErrorAs(t, err, &expectedError)
+}
+
+func TestZnsTokenUriMetadataIsNotSupported(t *testing.T) {
+	t.Parallel()
+	var expectedError *MethodIsNotSupportedError
+	_, err := zns.TokenURIMetadata("brad.zil")
+	assert.ErrorAs(t, err, &expectedError)
+}
+
+func TestZnsUnhashIsNotSupported(t *testing.T) {
+	t.Parallel()
+	var expectedError *MethodIsNotSupportedError
+	_, err := zns.Unhash("brad.zil")
+	assert.ErrorAs(t, err, &expectedError)
+}
