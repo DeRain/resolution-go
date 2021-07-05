@@ -2,8 +2,9 @@ package resolution
 
 import (
 	"encoding/json"
-	"github.com/unstoppabledomains/resolution-go/namingservice"
 	"strings"
+
+	"github.com/unstoppabledomains/resolution-go/namingservice"
 
 	"github.com/Zilliqa/gozilliqa-sdk/provider"
 	"github.com/unstoppabledomains/resolution-go/dnsrecords"
@@ -14,7 +15,7 @@ type Zns struct {
 	provider ZnsProvider
 }
 
-// ZnsBuilder is a builder to setup and build instance of Cns service.
+// ZnsBuilder is a builder to setup and build instance of Zns service.
 type ZnsBuilder interface {
 	// SetProvider set Zilliqa blockchain provider to communicate with ZNS registry
 	SetProvider(provider ZnsProvider) ZnsBuilder
@@ -78,7 +79,11 @@ func (zb *znsBuilder) Build() (*Zns, error) {
 // State Get raw data attached to domain.
 func (z *Zns) State(domainName string) (*ZnsDomainState, error) {
 	normalizedName := normalizeName(domainName)
-	if !z.IsSupportedDomain(normalizedName) {
+	isSupported, err := z.IsSupportedDomain(normalizedName)
+	if err != nil {
+		return nil, err
+	}
+	if !isSupported {
 		return nil, &DomainNotSupportedError{DomainName: normalizedName}
 	}
 	namehash, err := ZnsNameHash(domainName)
@@ -235,8 +240,8 @@ func (z *Zns) DNS(domainName string, types []dnsrecords.Type) ([]dnsrecords.Reco
 	return dnsRecords, nil
 }
 
-func (z *Zns) IsSupportedDomain(domainName string) bool {
-	return strings.HasSuffix(domainName, ".zil")
+func (z *Zns) IsSupportedDomain(domainName string) (bool, error) {
+	return strings.HasSuffix(domainName, ".zil"), nil
 }
 
 func (z *Zns) TokenURI(_ string) (string, error) {

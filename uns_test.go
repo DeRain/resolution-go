@@ -336,19 +336,34 @@ func TestUnsDnsGlobalTtl(t *testing.T) {
 
 func TestUnsIsSupportedDomain(t *testing.T) {
 	t.Parallel()
-	assert.True(t, uns.IsSupportedDomain("valid.crypto"))
-	assert.False(t, uns.IsSupportedDomain("invalid.zil"))
-	assert.True(t, uns.IsSupportedDomain("invalid.com"))
-	assert.True(t, uns.IsSupportedDomain("radomin-domain.com"))
-	assert.True(t, uns.IsSupportedDomain("some-domain.net"))
-	assert.True(t, uns.IsSupportedDomain("some-domain.wiowejfo.qwefwef"))
-	assert.True(t, uns.IsSupportedDomain("some-domain.wiowejfo.qwd"))
-	assert.False(t, uns.IsSupportedDomain("some-domain.wiowejfo.zil"))
+
+	isSupportedDomain := func(domain string) bool {
+		isSupported, _ := uns.IsSupportedDomain(domain)
+		return isSupported
+	}
+
+	assert.True(t, isSupportedDomain("valid.crypto"))
+	assert.True(t, isSupportedDomain("valid.qwdqwd.crypto"))
+	assert.False(t, isSupportedDomain("invalid.zil"))
+	assert.True(t, isSupportedDomain("invalid.wallet"))
+	assert.True(t, isSupportedDomain("invalid.bitcoin"))
+	assert.True(t, isSupportedDomain("invalid.x"))
+	assert.True(t, isSupportedDomain("invalid.888"))
+	assert.True(t, isSupportedDomain("invalid.blockchain"))
+	assert.True(t, isSupportedDomain("invalid.dao"))
+	assert.True(t, isSupportedDomain("invalid.nft"))
+	assert.True(t, isSupportedDomain("invalid.coin"))
+	assert.False(t, isSupportedDomain("invalid.com"))
+	assert.False(t, isSupportedDomain("radomin-domain.com"))
+	assert.False(t, isSupportedDomain("some-domain.net"))
+	assert.False(t, isSupportedDomain("some-domain.wiowejfo.qwefwef"))
+	assert.False(t, isSupportedDomain("some-domain.wiowejfo.qwd"))
+	assert.False(t, isSupportedDomain("some-domain.wiowejfo.zil"))
 }
 
-func TestUnsUnsupportedDomainError(t *testing.T) {
+func TestUnsDomainNotRegisteredError(t *testing.T) {
 	t.Parallel()
-	var expectedError *DomainNotSupportedError
+	var expectedError *DomainNotRegisteredError
 	_, err := uns.Data("invalid.zil", []string{"crypto.ETH.address"})
 	assert.ErrorAs(t, err, &expectedError)
 }
@@ -368,9 +383,9 @@ func TestUnsTokenURIDomainIsNotRegistered(t *testing.T) {
 	assert.ErrorAs(t, err, &expectedError)
 }
 
-func TestUnsTokenUriNotSupportedDomain(t *testing.T) {
+func TestUnsTokenURIZilDomainIsNotRegistered(t *testing.T) {
 	t.Parallel()
-	var expectedError *DomainNotSupportedError
+	var expectedError *DomainNotRegisteredError
 	_, err := uns.TokenURI("invalid.zil")
 	assert.ErrorAs(t, err, &expectedError)
 }
@@ -441,8 +456,8 @@ func TestUnsUnhashInvalidDomain(t *testing.T) {
 		Body: ioutil.NopCloser(bytes.NewBuffer(body)),
 	})
 	mockedClient.SetError(nil)
-	cnsWithMockedMetadataClient, _ := NewUnsBuilder().SetMetadataClient(&mockedClient).Build()
-	domainName, err := cnsWithMockedMetadataClient.Unhash("756e4e998dbffd803c21d23b06cd855cdc7a4b57706c95964a37e24b47c10fc9")
+	unsWithMockedMetadataClient, _ := NewUnsBuilder().SetMetadataClient(&mockedClient).Build()
+	domainName, err := unsWithMockedMetadataClient.Unhash("756e4e998dbffd803c21d23b06cd855cdc7a4b57706c95964a37e24b47c10fc9")
 	assert.Empty(t, domainName)
 	assert.ErrorAs(t, err, &expectedError)
 }

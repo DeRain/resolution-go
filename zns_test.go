@@ -203,9 +203,15 @@ func TestZnsEmptyDns(t *testing.T) {
 
 func TestZnsIsSupportedDomain(t *testing.T) {
 	t.Parallel()
-	assert.True(t, zns.IsSupportedDomain("valid.zil"))
-	assert.False(t, zns.IsSupportedDomain("valid.crypto"))
-	assert.False(t, zns.IsSupportedDomain("invalid.com"))
+
+	isSupportedDomain := func(domain string) bool {
+		isSupported, _ := zns.IsSupportedDomain(domain)
+		return isSupported
+	}
+
+	assert.True(t, isSupportedDomain("valid.zil"))
+	assert.False(t, isSupportedDomain("valid.crypto"))
+	assert.False(t, isSupportedDomain("invalid.com"))
 }
 
 func TestZnsUnsupportedDomainError(t *testing.T) {

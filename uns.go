@@ -99,9 +99,6 @@ func (c *Uns) Data(domainName string, keys []string) (*struct {
 	Values   []string
 }, error) {
 	normalizedName := normalizeName(domainName)
-	if !c.IsSupportedDomain(normalizedName) {
-		return nil, &DomainNotSupportedError{DomainName: normalizedName}
-	}
 	namehash := kns.NameHash(normalizedName)
 	tokenID := namehash.Big()
 	data, err := c.proxyReader.GetData(&bind.CallOpts{Pending: false}, keys, tokenID)
@@ -289,15 +286,26 @@ func (c *Uns) DNS(domainName string, types []dnsrecords.Type) ([]dnsrecords.Reco
 	return dnsRecords, nil
 }
 
-func (c *Uns) IsSupportedDomain(domainName string) bool {
-	return !strings.HasSuffix(domainName, ".zil")
+func (c *Uns) IsSupportedDomain(domainName string) (bool, error) {
+	chunks := strings.Split(domainName, ".")
+	if len(chunks) < 2 {
+		return false, nil
+	}
+	extension := chunks[len(chunks)-1]
+	if extension == "zil" {
+		return false, nil
+	}
+	namehash := kns.NameHash(extension)
+	tokenID := namehash.Big()
+	data, err := c.proxyReader.Exists(&bind.CallOpts{Pending: false}, tokenID)
+	if err != nil {
+		return false, err
+	}
+	return data, nil
 }
 
 func (c *Uns) TokenURI(domainName string) (string, error) {
 	normalizedName := normalizeName(domainName)
-	if !c.IsSupportedDomain(normalizedName) {
-		return "", &DomainNotSupportedError{DomainName: normalizedName}
-	}
 	namehash := kns.NameHash(normalizedName)
 	tokenUri, err := c.tokenUriByNamehash(namehash)
 	if err != nil {

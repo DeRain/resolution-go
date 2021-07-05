@@ -26,11 +26,11 @@ func TestDetectNamingServiceType(t *testing.T) {
 
 	serviceType, err = DetectNamingService("test.crypto")
 	assert.Nil(t, err)
-	assert.Equal(t, namingservice.CNS, serviceType)
+	assert.Equal(t, namingservice.UNS, serviceType)
 
 	serviceType, err = DetectNamingService("test.asdasdas")
 	assert.Nil(t, err)
-	assert.Equal(t, namingservice.CNS, serviceType)
+	assert.Equal(t, namingservice.UNS, serviceType)
 }
 
 func TestDetectNamingServiceTypeInvalidDomain(t *testing.T) {

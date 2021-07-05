@@ -1,6 +1,6 @@
 package namingservice
 
 const (
-	CNS = "CNS"
+	UNS = "UNS"
 	ZNS = "ZNS"
 )
